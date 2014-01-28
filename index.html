@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
@@ -21,7 +22,7 @@
                   <p>input type="text" autofocus</p>
                 </div>
                 <div class="small-12 medium-4 columns">
-                  <input type="text" autofocus>
+                  <input type="text" autofocus class="auto">
                 </div>
                 <div class="small-12 medium-4 columns">
                   <input type="submit" value="Submit" class="button">
@@ -29,7 +30,7 @@
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p></p>
+                  <p>Refresh the page and your cursor will be in this field.</p>
                 </div>
               </div>
             </div>
@@ -43,17 +44,17 @@
               <div class="row">
                 <div class="small-12 medium-4 columns">
                   <h4>Placeholder</h4>
-                  <p>&lt;input type="text" name="user-name" id="user-name" placeholder="at least 3 characters"&gt;</p>
+                  <p>&lt;input type="text" name="user-name" id="user-name" placeholder="First Name"&gt;</p>
                 </div>
                 <div class="small-12 medium-4 columns">
-                  <input type="text" name="user-name" id="user-name" placeholder="at least 3 characters">
+                  <input type="text" name="user-name" id="user-name" placeholder="First Name" class="field">
                 </div>
                 <div class "small-12 medium-4 columns">
                   <input type="submit" value="Submit" class="button">
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p></p>
+                  <p>The placeholder 'First Name' informs the user what needs to be inputted.</p>
                 </div>
               </div>
             </div>
@@ -67,10 +68,10 @@
               <div class="row">
                 <div class="small-12 medium-4 columns">
                   <h4>Required</h4>
-                  <p>input type="text" id="given-name" name="given-name" required</p>
+                  <p>&lt;input type="text" id="given-name" name="given-name" required&gt;</p>
                 </div>
                 <div class="small-12 medium-4 columns">
-                  <input type="text" id="given-name" name="given-name" required>
+                  <input type="text" id="given-name" name="given-name" class="field" required>
                 </div>
                 <div class="small-12 medium-4 columns">
                   <input type="submit" value="Submit" class="button">
@@ -78,7 +79,7 @@
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p></p>
+                  <p>See what happens when you leave this field blank and click the submit button.</p>
                 </div>
               </div>
             </div>
@@ -95,7 +96,7 @@
                   <p>&lt;input pattern="[0-9][A-Z]{3}" name="product" type="text" title="Single digit followed by three uppercase letters."/&gt;</p>
                 </div>
                 <div class="small-12 medium-4 columns">
-                  <input pattern="[0-9][A-Z]{3}" name="product" type="text" title="Single digit followed by three uppercase letters."/>
+                  <input pattern="[0-9][A-Z]{3}" name="product" type="text" title="Single digit followed by three uppercase letters." class="field"/>
                 </div>
                 <div class="small-12 medium-4 columns">
                   <input type="submit" value="Submit" class="button">                
@@ -103,7 +104,7 @@
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p></p>
+                  <p>You must conform to the pattern of a single digit followed by 3 letters in order to submit.</p>
                 </div>
               </div>
             </div>
@@ -117,21 +118,15 @@
               <div class="row">
                 <div class="small-12 medium-4 columns">
                   <h4>Multiple</h4>
-                  <p></p>
+                  <p>&lt;select multiple&gt;</p>
                 </div>
                 <div class="small-12 medium-4 columns">
-                  <label>Your favorite fruit:
-                  <datalist id="fruits">
-                    <select name="fruits">
-                      <option value="Blackberry">Blackberry</option>
-                      <option value="Blackcurrant">Blackcurrant</option>
-                      <option value="Blueberry">Blueberry</option>
-                      <!-- … -->
-                    </select>
-                  If other, please specify:
-                  </datalist>
-                    <input type="text" name="fruit" list="fruits" multiple>
-                  </label>
+                  <select multiple>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Google+">Google+</option>
+                  </select>
                 </div>
                 <div class="small-12 medium-4 columns">
                   <input type="submit" value="Submit" class="button">
@@ -139,12 +134,61 @@
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p>Date allows a user to input a day, month and year - aka a date. The user is provided with a graphical calendar to input the date.</p>
+                  <p>Select multiple options by holding control when clicking</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </li> 
+
+        <!--Range-->
+        <li class="row">
+          <form action="" method="post"></form>
+            <div class="small-12 columns max-width small-centered callout panel">
+              <div class="row">
+                <div class="small-12 medium-4 columns">
+                  <h4>Range</h4>
+                  <p>&lt;input type="number" min="1" max="10" class="field"&gt;</p>
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <input type="number" min="1" max="10" class="field">
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <input type="submit" value="Submit" class="button">
+                </div>  
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <p>The background will be red when the value is out of range and turn red when in range</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </li>
+
+        <!--Read Only-->
+        <li class="row">
+          <form action="" method="post"></form>
+            <div class="small-12 columns max-width small-centered callout panel">
+              <div class="row">
+                <div class="small-12 medium-6 columns">
+                  <h4>Read Only</h4>
+                  <p>&lt;input type="text" value="UK" class="field" readonly&gt;</p>
+                </div>
+                <div class="small-12 medium-6 columns">
+                  <input type="text" value="UK" class="field" readonly>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <p></p>
                 </div>
               </div>
             </div>
           </form>
         </li>                        
+                        
+
       </ul>
     </div>
 
